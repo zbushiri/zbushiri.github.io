@@ -1,1 +1,1 @@
-Starting website to get the basics of HTML/CSS down 
+First ever website to get to know the basics of HTML/CSS while in my first year of college!
