@@ -1,9 +1,17 @@
 body {
-    background: rgb(255, 7, 7);
+    background: rgb(102, 155, 188);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-    color: blue;
+    color: rgb(0, 48, 73);
     text-align: center;
+}
+
+h2 {
+    color: rgb(0, 48, 73);
+}
+
+p {
+    color: rgb(253, 240, 213);
 }
