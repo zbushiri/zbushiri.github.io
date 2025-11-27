@@ -1,8 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     margin: 40px;
-    color: #333;
-    background-color: rgb(102, 155, 188);
+    color: rgb(0, 180, 216);
+    background-color: rgb(202, 240, 248);
 }
 table {
     width: 100%;
@@ -12,13 +12,13 @@ td {
     vertical-align: top;
     padding: 8px;
 }
-h1, h2 {
-    color: rgb(0, 48, 73);
+h1, h2, h3{
+    color: rgb(0, 119, 182);
     margin-bottom: 5px;
 }
 hr {
     border: 0;
-    border-top: 2px solid rgb(253, 240, 213);
+    border-top: 2px solid rgb(3, 4, 94);
     margin: 10px 0 20px 0;
 }
 
