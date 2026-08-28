@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'comic';
+  src: url('fonts/comic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#content {
+  font-size: 24px;
+  color: #0e0e52;
+  margin: auto;
+  width: 80%;
+}
+
+body {
+  background-color: #3943b7;
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'comic', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link {
+  color: #78c0e0;
+}
+
+#mheading {
+  color: #449dd1;
+}
+
+img {
+    width: 300px;
+    height: auto;
+}
+
+table {
+    border-spacing: 40px 10px;
+}
