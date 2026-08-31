@@ -1,36 +1,113 @@
 @font-face {
-  font-family: 'comic';
-  src: url('fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-#content {
-  font-size: 24px;
-  color: #0e0e52;
-  margin: auto;
-  width: 80%;
+    font-family: 'comic';
+    src: url('fonts/comic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
-  background-color: #3943b7;
-  margin: 0;
-  min-height: 100vh;
-  font-family: 'comic', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background-color: #3943b7;
+    color: #0e0e52;
+    font-family: 'comic', sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+#content {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 20px;
+    font-size: 24px;
 }
 
-.link {
-  color: #78c0e0;
+header {
+    text-align: center;
 }
 
 #mheading {
-  color: #449dd1;
+    color: #449dd1;
+    font-size: 40px;
+    margin-bottom: 5px;
 }
+
+header h2 {
+    margin-top: 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ASSIGNMENTS */
+
+#assignments {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+
+/* PROJECTS */
+
+#projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+
+/* ASSIGNMENT AND PROJECT CARDS */
+
+.card {
+    width: 300px;
+    background-color: #78c0e0;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.card a {
+    display: block;
+    width: 100%;
+}
+
+.card h3 {
+    margin: 0 0 15px 0;
+    font-size: 22px;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.card p {
+    margin: 15px 0 0 0;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+
+/* OTHER IMAGES */
 
 img {
     width: 300px;
@@ -39,10 +116,48 @@ img {
     padding: 8px;
 }
 
+
+/* TABLES */
+
 table {
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     padding: 10px;
+    border: 2px solid #0e0e52;
+}
+
+
+/* FOOTER */
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+/* SMALL SCREEN / PORTRAIT */
+
+@media only screen and (max-width: 768px) {
+
+    #content {
+        width: 90%;
+        padding: 20px 10px;
+    }
+
+    #mheading {
+        font-size: 32px;
+    }
+
+    #assignments,
+    #projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 300px;
+    }
 }
