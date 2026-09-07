@@ -1,0 +1,638 @@
+/* General */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #262626;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.page {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* Header */
+#top-bar,
+#school-header {
+    background-color: #111111;
+}
+
+#top-bar nav,
+#main-nav .page,
+#school-header .page {
+    display: flex;
+}
+
+#top-bar nav {
+    justify-content: flex-end;
+}
+
+#top-bar a {
+    padding: 10px 14px;
+    color: white;
+    font-size: 12px;
+}
+
+#school-header {
+    border-top: 1px solid #444444;
+}
+
+#school-header .page {
+    min-height: 85px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#university-name,
+#school-name {
+    color: white;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+#university-name {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#university-name span {
+    margin-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+#school-name {
+    font-size: 25px;
+}
+
+/* Navigation */
+#main-nav {
+    background-color: #73000a;
+}
+
+#main-nav .page {
+    justify-content: center;
+}
+
+#main-nav a {
+    display: block;
+    padding: 15px 35px;
+    color: white;
+    font-weight: bold;
+}
+
+#main-nav a:hover {
+    background-color: #5c0010;
+}
+
+/* Main content */
+#hero {
+    position: relative;
+    height: 500px;
+    background-image: url("https://placehold.co/1600x700/5c0010/ffffff?text=Lorem+Ipsum");
+    background-position: center;
+    background-size: cover;
+}
+
+#hero button {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    width: 42px;
+    height: 42px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: #111111;
+    color: white;
+}
+
+#intro {
+    max-width: 1000px;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#intro p {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+.section-row,
+#quote .page,
+#cards,
+#connect-buttons,
+#school-footer-info,
+#school-socials,
+#university-logo,
+#footer-groups,
+.link-columns {
+    display: flex;
+}
+
+.section-row {
+    min-height: 450px;
+    background-color: #f4f4f4;
+}
+
+.white-row {
+    background-color: white;
+}
+
+.side-image,
+.section-text {
+    width: 50%;
+}
+
+.side-image {
+    height: 450px;
+    background-position: center;
+    background-size: cover;
+}
+
+.image-one {
+    background-image: url("https://placehold.co/800x600/9b9b9b/ffffff?text=Lorem+Ipsum");
+}
+
+.image-two {
+    background-image: url("https://placehold.co/800x600/666666/ffffff?text=Lorem+Ipsum");
+}
+
+.image-three {
+    background-image: url("https://placehold.co/800x600/7a7a7a/ffffff?text=Lorem+Ipsum");
+}
+
+.section-text {
+    padding: 80px 9%;
+}
+
+.section-text h2,
+#stay-connected h2,
+#school-footer h2 {
+    margin: 0 0 20px;
+    color: #73000a;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 42px;
+}
+
+.section-text p {
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 12px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #73000a;
+    color: #73000a;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    color: #111111;
+}
+
+/* Quote and cards */
+#quote {
+    padding: 80px 0;
+    background-color: #73000a;
+    color: white;
+}
+
+#quote .page {
+    max-width: 1000px;
+    align-items: center;
+    gap: 50px;
+}
+
+#quote .page > div {
+    flex: 2;
+}
+
+#quote img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+}
+
+blockquote {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 30px;
+    line-height: 1.4;
+}
+
+#quote p {
+    color: #c8c372;
+    font-weight: bold;
+}
+
+#cards {
+    gap: 25px;
+    padding: 65px 0;
+}
+
+.card {
+    flex: 1;
+    overflow: hidden;
+}
+
+.card h3 {
+    margin: 18px 0 8px;
+    color: #73000a;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 24px;
+}
+
+.card p {
+    margin: 0;
+    color: #262626;
+}
+
+.card img,
+#connect-buttons a,
+.black-button,
+#school-socials img,
+#university-logo nav a {
+    transition: .2s;
+}
+
+.card:hover img {
+    transform: scale(1.03);
+}
+
+/* Stay connected */
+#stay-connected {
+    padding: 75px 0 120px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#stay-connected h2 {
+    margin-bottom: 8px;
+    font-size: 64px;
+}
+
+#stay-connected p {
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+#connect-buttons {
+    justify-content: center;
+    gap: 20px;
+}
+
+#connect-buttons a,
+.black-button {
+    border: 3px solid white;
+    box-shadow: 0 0 5px #888888;
+    background-color: #73000a;
+    color: white;
+    font-weight: bold;
+}
+
+#connect-buttons a {
+    min-width: 200px;
+    padding: 16px 22px;
+}
+
+#connect-buttons a:hover,
+.black-button:hover {
+    background-color: #5c0010;
+    transform: translateY(-3px);
+}
+
+/* School footer */
+#school-footer {
+    padding: 65px 0 35px;
+    background-color: #f4f4f4;
+}
+
+#school-footer h2 {
+    font-size: 38px;
+}
+
+#school-footer-info {
+    gap: 50px;
+}
+
+#school-socials {
+    width: 45%;
+    align-items: center;
+    gap: 50px;
+}
+
+.black-button {
+    padding: 17px 20px;
+    background-color: #111111;
+    text-transform: uppercase;
+}
+
+#school-socials div {
+    display: flex;
+    gap: 20px;
+}
+
+#school-socials div a,
+#school-socials div img {
+    display: block;
+    width: 48px;
+    height: 48px;
+}
+
+#school-socials img:hover,
+#university-logo nav a:hover {
+    transform: scale(1.1);
+}
+
+#school-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 45px;
+    width: 30%;
+    padding-left: 25px;
+    border-left: 1px solid #aaaaaa;
+}
+
+#school-links a,
+#school-footer address a {
+    color: #73000a;
+    font-weight: bold;
+}
+
+#school-footer address {
+    width: 25%;
+    padding-left: 25px;
+    border-left: 1px solid #aaaaaa;
+    font-style: normal;
+    line-height: 1.7;
+}
+
+#school-footer address a {
+    display: block;
+    text-decoration: underline;
+}
+
+/* University footer */
+#university-footer {
+    padding: 45px 0 65px;
+    background-color: #73000a;
+    color: white;
+}
+
+#university-logo {
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#university-logo > div {
+    width: 85px;
+    height: 85px;
+    padding-top: 23px;
+    border: 2px solid white;
+    text-align: center;
+    font-size: 28px;
+}
+
+#university-logo p {
+    margin: 0 0 0 15px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 18px;
+}
+
+#university-logo strong {
+    font-size: 34px;
+}
+
+#university-logo nav {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+}
+
+#university-logo nav a {
+    width: 45px;
+    height: 45px;
+    border: 2px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#university-logo nav img {
+    height: 100%;
+}
+
+#footer-groups {
+    gap: 45px;
+}
+
+.footer-group h3 {
+    margin: 0 0 15px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #d3a5a9;
+    color: white;
+    font-size: 18px;
+}
+
+#schools {
+    width: 48%;
+}
+
+#offices {
+    width: 36%;
+}
+
+#tools {
+    width: 16%;
+}
+
+.link-columns {
+    gap: 30px;
+}
+
+.link-columns div {
+    flex: 1;
+}
+
+.footer-group a {
+    display: block;
+    margin-bottom: 12px;
+    color: white;
+    font-weight: bold;
+}
+
+.footer-group a:hover,
+#bottom-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Bottom footer */
+#bottom-footer {
+    padding: 22px 0;
+    background-color: #000000;
+    text-align: center;
+}
+
+#bottom-footer a {
+    display: inline-block;
+    margin: 0 10px 8px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Computer scroll effect */
+@media only screen and (min-width:769px) {
+    #hero {
+        background-attachment: fixed;
+    }
+
+    .section-row {
+        min-height: 750px;
+    }
+
+    .side-image {
+        position: sticky;
+        top: 0;
+        align-self: flex-start;
+    }
+}
+
+/* Medium screens */
+@media only screen and (max-width:1200px) {
+    #footer-groups {
+        flex-direction: column;
+    }
+
+    #schools,
+    #offices,
+    #tools {
+        width: 100%;
+    }
+}
+
+/* Small screens */
+@media only screen and (max-width:768px) {
+    #top-bar nav,
+    #main-nav .page,
+    #school-header .page,
+    .section-row,
+    #quote .page,
+    #cards,
+    #connect-buttons,
+    #school-footer-info,
+    #school-socials,
+    .link-columns {
+        flex-direction: column;
+    }
+
+    #top-bar nav,
+    #main-nav .page {
+        align-items: flex-start;
+    }
+
+    #school-header .page {
+        align-items: flex-start;
+        gap: 20px;
+        padding: 25px 0;
+    }
+
+    #main-nav a {
+        padding: 10px 0;
+    }
+
+    #hero {
+        height: 300px;
+    }
+
+    #intro {
+        padding: 55px 0;
+    }
+
+    #intro p {
+        font-size: 21px;
+    }
+
+    .side-image,
+    .section-text,
+    #school-socials,
+    #school-links,
+    #school-footer address {
+        width: 100%;
+    }
+
+    .side-image {
+        height: 300px;
+    }
+
+    .section-text {
+        padding: 45px 8%;
+    }
+
+    .section-text h2,
+    #stay-connected h2,
+    #school-footer h2 {
+        font-size: 34px;
+    }
+
+    #quote .page {
+        text-align: center;
+    }
+
+    #quote img {
+        width: 220px;
+        height: 220px;
+        margin: auto;
+    }
+
+    blockquote {
+        font-size: 24px;
+    }
+
+    #cards {
+        padding: 45px 0;
+    }
+
+    #connect-buttons {
+        align-items: stretch;
+    }
+
+    #school-socials {
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    #school-links {
+        flex-direction: column;
+        gap: 14px;
+        padding-left: 0;
+        border-left: 0;
+    }
+
+    #school-footer address {
+        padding-left: 0;
+        border-left: 0;
+    }
+
+    #university-logo {
+        flex-wrap: wrap;
+    }
+
+    #university-logo nav {
+        width: 100%;
+        margin: 20px 0 0;
+    }
+}
