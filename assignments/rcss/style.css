@@ -93,10 +93,6 @@ a {
     font-weight: bold;
 }
 
-#main-nav a:hover {
-    background-color: #5c0010;
-}
-
 /* Main content */
 #hero {
     position: relative;
@@ -104,18 +100,6 @@ a {
     background-image: url("https://placehold.co/1600x700/5c0010/ffffff?text=Lorem+Ipsum");
     background-position: center;
     background-size: cover;
-}
-
-#hero button {
-    position: absolute;
-    right: 25px;
-    bottom: 25px;
-    width: 42px;
-    height: 42px;
-    border: 2px solid white;
-    border-radius: 50%;
-    background-color: #111111;
-    color: white;
 }
 
 #intro {
@@ -201,10 +185,6 @@ a {
     font-weight: bold;
 }
 
-.read-more:hover {
-    color: #111111;
-}
-
 /* Quote and cards */
 #quote {
     padding: 80px 0;
@@ -262,18 +242,6 @@ blockquote {
     color: #262626;
 }
 
-.card img,
-#connect-buttons a,
-.black-button,
-#school-socials img,
-#university-logo nav a {
-    transition: .2s;
-}
-
-.card:hover img {
-    transform: scale(1.03);
-}
-
 /* Stay connected */
 #stay-connected {
     padding: 75px 0 120px;
@@ -308,12 +276,6 @@ blockquote {
 #connect-buttons a {
     min-width: 200px;
     padding: 16px 22px;
-}
-
-#connect-buttons a:hover,
-.black-button:hover {
-    background-color: #5c0010;
-    transform: translateY(-3px);
 }
 
 /* School footer */
@@ -352,11 +314,6 @@ blockquote {
     display: block;
     width: 48px;
     height: 48px;
-}
-
-#school-socials img:hover,
-#university-logo nav a:hover {
-    transform: scale(1.1);
 }
 
 #school-links {
@@ -475,11 +432,6 @@ blockquote {
     font-weight: bold;
 }
 
-.footer-group a:hover,
-#bottom-footer a:hover {
-    text-decoration: underline;
-}
-
 /* Bottom footer */
 #bottom-footer {
     padding: 22px 0;
@@ -492,23 +444,6 @@ blockquote {
     margin: 0 10px 8px;
     color: white;
     font-weight: bold;
-}
-
-/* Computer scroll effect */
-@media only screen and (min-width:769px) {
-    #hero {
-        background-attachment: fixed;
-    }
-
-    .section-row {
-        min-height: 750px;
-    }
-
-    .side-image {
-        position: sticky;
-        top: 0;
-        align-self: flex-start;
-    }
 }
 
 /* Medium screens */
