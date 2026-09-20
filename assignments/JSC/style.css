@@ -1,18 +1,67 @@
-/* Center everything */
+/* Page */
 body {
-    text-align:center;
-    background-color:#fdf0d5;
+    text-align: center;
+    background-color: #fdf0d5;
 }
 
-/* text colors */
-h1 {
-color: #c1121f;
+#content {
+    width: 80%;
+    margin: auto;
 }
 
-h2 {
-color: #780000;
+/* Colors */
+#blue {
+    color: #003049;
+}
+
+#red {
+    color: #d62828;
 }
 
 p {
-color:#003049;
+    color: #003049;
+}
+
+/* Hide */
+.hide {
+    display: none;
+}
+
+/* Menu */
+#arrow {
+    cursor: pointer;
+}
+
+#links a {
+    display: block;
+    color: #003049;
+    cursor: pointer;
+}
+
+/* Box */
+section {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #003049;
+    background-color: white;
+}
+
+/* Display */
+@media (min-width: 768px) {
+    #arrow {
+        display: none;
+    }
+
+    #links,
+    #links.hide {
+        display: block;
+    }
+
+    #links a {
+        display: inline;
+    }
+
+    #links a:not(:last-child)::after {
+        content: " |";
+    }
 }

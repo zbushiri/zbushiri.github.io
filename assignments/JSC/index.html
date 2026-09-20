@@ -9,16 +9,39 @@
 <body>
     <div id="content">
         <header>
-            <h1>Assignment 8</h1>
-            <h2>If Statements</h2>
+            <h1 id="blue">Assignment 8</h1>
+            <h2 id="red">If Statements</h2>
         </header>
+
         <main>
-            <p>Exercise 1 | Exercise 2</p>
+            <button id="arrow">▼</button>
+
+            <nav id="links" class="hide">
+                <a href="#" id="link1">Exercise 1</a>
+                <a href="#" id="link2">Exercise 2</a>
+            </nav>
+
+            <section id="one">
+                <h3>Missing Class Points Deduction</h3>
+                <p>How many days do you intend to miss class?</p>
+                <input id="days" type="number">
+                <p id="result"></p>
+                <p id="message"></p>
+            </section>
+
+            <section id="two" class="hide">
+                <h3>End of Semester Counter</h3>
+                <p id="count"></p>
+                <p id="end"></p>
+            </section>
         </main>
+
         <footer>
             <p>&copy; zakibushiri</p>
         </footer>
     </div>
+
+    <script src="main.js"></script>
 </body>
 
 </html>
