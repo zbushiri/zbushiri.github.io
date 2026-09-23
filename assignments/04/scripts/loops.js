@@ -16,3 +16,34 @@ document.getElementById("btn-loop").onclick = (e) => {
         loopResult.innerHTML += `<p>${i+1}</p>`;
     }*/
 };
+
+//looping through a range
+document.getElementById("btn-loop-range").onclick = () => {
+    const startNum = parseInt(document.getElementById("txt-start").value);
+    const endNum = parseInt(document.getElementById("txt-end").value);
+    const errorStart = document.getElementById("error-start");
+    errorStart.classList.add("hidden");
+    const errorEnd = document.getElementById("error-end");
+    errorEnd.classList.add("hidden");
+    const ul = document.getElementById("range-list");
+
+    if(startNum < 0 || startNum > 5){
+        errorStart.innerHTML = "* Invalid";
+        errorStart.classList.remove("hidden");
+        return;
+    }
+
+    if(endNum < 10 || endNum > 20 || endNum < startNum){
+        errorEnd.innerHTML = "* Invalid";
+        errorEnd.classList.remove("hidden");
+        return;
+    }
+
+    ul.innerHTML = "";
+
+    for(let i = startNum; i < endNum; i++){
+        const li = document.createElement("li");
+        li.innerHTML = i;
+        ul.appendChild(li);
+    }
+};

@@ -31,8 +31,31 @@
                         <button id="btn-loop">Loop</button>
                         <div id="loop-result"></div>
                     </section>
+                    
+                    <section class="project-card">
+                        <h3>Loops with Range</h3>
+                        <p>
+                            <label for="txt-start">Start:</label>
+                            <input type="number" id="txt-start" min="0" max="5">
+                            <span id="error-start" class="error hidden"></span>
+                        </p>
+                        <p>
+                            <label for="txt-end">End:</label>
+                            <input type="number" id="txt-end" min="10" max="20">
+                            <span id="error-end" class="error hidden"></span>
+                        </p>
+
+                        <p>
+                            <button id="btn-loop-range">Loop</button>
+                        </p>
+
+                        <ul id="range-list">
+
+                        </ul>
+                    </section>
                 </div>
             </main>
         </div>
+        <script src="scripts/loops.js"></script>
     </body>
 </html>
