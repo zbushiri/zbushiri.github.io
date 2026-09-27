@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 10 | Arrays</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="content">
+        <h1>Assignment 10</h1>
+        <h2>Arrays</h2>
+
+        <label for="destination-type">Pick Your Destination Type</label>
+        <select id="destination-type">
+            <option value="">Select</option>
+            <option value="landmarks">Landmarks</option>
+            <option value="nature">Nature Spots</option>
+        </select>
+
+        <nav id="destinations" aria-label="Destinations"></nav>
+
+        <section id="map-wrap" hidden>
+            <h3 id="map-title"></h3>
+            <iframe id="map" title="Google map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <footer>&copy; zakibushiri</footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
