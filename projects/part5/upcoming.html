@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cozy Corner | Upcoming Releases</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <script src="upcoming.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <a class="logo" href="index.html">☁️ Cozy Corner</a>
+
+    <nav class="big-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href=
+    "anime.html">Anime Shelf</a><a class="active" href="upcoming.html">Upcoming Releases</a><a href=
+    "reviews.html">Review Room</a><a href="about.html">About Me</a><a href=
+    "faq.html">FAQ</a></nav>
+
+    <details class="small-nav">
+      <summary aria-label="Open menu">☰</summary>
+
+      <nav class="menu-links" aria-label="Mobile navigation"><a href="index.html">Home</a><a href=
+      "anime.html">Anime Shelf</a><a class="active" href="upcoming.html">Upcoming Releases</a><a href=
+      "reviews.html">Review Room</a><a href="about.html">About Me</a><a href=
+      "faq.html">FAQ</a></nav>
+    </details>
+  </header>
+
+  <main>
+    <p class="eyebrow page-title">Coming soon</p>
+
+    <h1 class="inner-title">Upcoming Releases</h1>
+
+    <p class="intro">A simple watchlist for anime arriving next. Dates can change, so official
+    announcements are the final word.</p>
+
+    <p id="release-status" class="api-status" role="status">Loading upcoming anime...</p>
+
+    <section id="release-list" class="cards" aria-live="polite">
+      <article class="panel">
+        <h2>Loading releases</h2>
+        <p>The latest upcoming anime will appear here shortly.</p>
+      </article>
+    </section>
+
+    <div class="load-more"><button id="load-more" class="button" type="button" hidden>Load More</button></div>
+
+    <noscript><p class="api-status">JavaScript must be enabled to load releases from AniList.</p></noscript>
+  </main>
+
+  <footer>
+    <a class="logo" href="index.html">☁️ Cozy Corner</a>
+
+    <p>Your cozy space for anime, reviews, and everyday favorites.</p>
+
+    <div class="socials">
+      <a href="https://www.instagram.com/zrunit" target="_blank" rel=
+      "noopener noreferrer">Instagram</a><a href="https://www.linkedin.com/in/zakibushiri/" target=
+      "_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://discord.gg/fgdWXJXKu5"
+      target="_blank" rel="noopener noreferrer">Discord</a>
+    </div>
+
+    <p class="copyright">Upcoming anime data provided by <a href="https://anilist.co" target="_blank" rel="noopener noreferrer">AniList</a>.</p>
+    <p class="copyright">© 2026 Cozy Corner</p>
+  </footer>
+</body>
+</html>
