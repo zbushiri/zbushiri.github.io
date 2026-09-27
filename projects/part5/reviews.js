@@ -1,3 +1,4 @@
+/* Got help learning how to impliment user specific reviews so that everyone can only delete their comment */
 const reviewKey = "cozy-corner-reviews";
 const reviewForm = document.querySelector("#review-form");
 const reviewText = document.querySelector("#review-text");

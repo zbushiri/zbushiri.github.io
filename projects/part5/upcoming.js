@@ -1,3 +1,4 @@
+/* implemented anilist api to update new animes */
 const apiUrl = "https://graphql.anilist.co";
 const cacheKey = "cozy-corner-upcoming-anime-v3";
 const cacheTime = 6 * 60 * 60 * 1000;
@@ -113,7 +114,7 @@ async function loadAnime(page = 1, append = false) {
             try {
                 localStorage.setItem(cacheKey, JSON.stringify({ time: Date.now(), anime, hasNextPage }));
             } catch {
-                // The page still works when browser storage is disabled.
+                /* The page still works when browser storage is disabled. */
             }
         }
         showAnime(anime, append);

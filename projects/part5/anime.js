@@ -5,6 +5,7 @@ const genreInput = document.querySelector("#genre");
 const moreAnime = document.querySelector("#more-anime");
 const shownIds = new Set();
 
+/* Found way to impliment filter as certain things were coming up */
 const animeQuery = `
 query ($genre: String, $page: Int) {
   Page(page: $page, perPage: 12) {
