@@ -2,7 +2,7 @@
   Source: https://www.geeksforgeeks.org/javascript/design-a-running-car-animation-using-html-and-css/
 */
 
-// Create a single car with multiple parameters
+// Arrow function to create a single car with multiple parameters
 const createCar = (laneIndex, startPosition, speed, color, carId) => {
     const carsContainer = document.getElementById('cars-container');
     const car = document.createElement('div');
@@ -78,7 +78,44 @@ const continuousCarGeneration = (interval) => {
     setInterval(generateNewCar, interval);
 };
 
-// Arrow function to initialize everything
+// Log animation info
+const logAnimationInfo = () => {
+    console.log('========================================');
+    console.log('🏎️  Car Running Animation - Multiple Cars');
+    console.log('Source: GeeksforGeeks');
+    console.log('Link: https://www.geeksforgeeks.org/javascript/design-a-running-car-animation-using-html-and-css/');
+    console.log('========================================');
+    console.log('Features:');
+    console.log('  ✓ Multiple cars on 3 lanes');
+    console.log('  ✓ Random positions (horizontal)');
+    console.log('  ✓ Random lanes (vertical)');
+    console.log('  ✓ Random speeds');
+    console.log('  ✓ Random colors');
+    console.log('  ✓ Dynamic creation via loop');
+    console.log('========================================\n');
+};
+
+// ACar statistics
+const getCarStats = () => {
+    const carsContainer = document.getElementById('cars-container');
+    const cars = carsContainer.querySelectorAll('.car');
+    return {
+        totalCars: cars.length,
+        lanes: 3,
+        maxCarsPerLane: 'Unlimited (overlapping allowed)'
+    };
+};
+
+// Display stats
+const displayStats = () => {
+    console.log('📊 Current Stats:');
+    const stats = getCarStats();
+    console.log(`  Total Cars: ${stats.totalCars}`);
+    console.log(`  Available Lanes: ${stats.lanes}`);
+    console.log(`  Max Cars Per Lane: ${stats.maxCarsPerLane}\n`);
+};
+
+// Initialize everything
 const initializeAnimation = () => {
     logAnimationInfo();
     
@@ -86,13 +123,17 @@ const initializeAnimation = () => {
     console.log('🚗 Loading initial cars...');
     loadCars(8); // Load 8 cars initially
     
-    // Generation of new cars every 3 seconds
+    // Start continuous generation
     console.log('🔄 Starting continuous car generation every 3 seconds...\n');
     continuousCarGeneration(3000);
     
+    // Display stats after 2 seconds
+    setTimeout(() => {
+        displayStats();
+    }, 2000);
 };
 
-// Cleanup
+// Arrow function for cleanup
 const setupCleanup = () => {
     window.addEventListener('beforeunload', () => {
         console.log('🛑 Animation stopped - Page unloading');
