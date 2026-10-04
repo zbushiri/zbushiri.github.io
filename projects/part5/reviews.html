@@ -1,82 +1,145 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Corner | Review Room</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
 
-  <title>Cozy Corner | Review Room</title>
-  <link rel="stylesheet" href="style.css" type="text/css">
-</head>
+  <body>
+    <header>
+      <a class="logo" href="index.html">☁️ Cozy Corner</a>
 
-<body>
-  <header>
-    <a class="logo" href="index.html">☁️ Cozy Corner</a>
+      <nav class="big-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="anime.html">Anime Shelf</a>
+        <a href="upcoming.html">Upcoming Releases</a>
+        <a class="active" href="reviews.html">Review Room</a>
+        <a href="about.html">About Me</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
 
-    <nav class="big-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="anime.html">Anime
-        Shelf</a><a href="upcoming.html">Upcoming Releases</a><a class="active" href="reviews.html">Review Room</a><a
-        href="about.html">About Me</a><a href="faq.html">FAQ</a></nav>
+      <details class="small-nav">
+        <summary aria-label="Open menu">☰</summary>
 
-    <details class="small-nav">
-      <summary aria-label="Open menu">☰</summary>
+        <nav class="menu-links" aria-label="Mobile navigation">
+          <a href="index.html">Home</a>
+          <a href="anime.html">Anime Shelf</a>
+          <a href="upcoming.html">Upcoming Releases</a>
+          <a class="active" href="reviews.html">Review Room</a>
+          <a href="about.html">About Me</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+      </details>
+    </header>
 
-      <nav class="menu-links" aria-label="Mobile navigation"><a href="index.html">Home</a><a href="anime.html">Anime
-          Shelf</a><a href="upcoming.html">Upcoming Releases</a><a class="active" href="reviews.html">Review Room</a><a
-          href="about.html">About Me</a><a href="faq.html">FAQ</a></nav>
-    </details>
-  </header>
+    <main>
+      <!-- Page Introduction -->
+      <p class="eyebrow page-title">Share your favorites</p>
 
-  <main>
-    <p class="eyebrow page-title">Share your favorites</p>
+      <h1 class="inner-title">Review Room</h1>
 
-    <h1 class="inner-title">Review Room</h1>
+      <p class="intro">
+        Post an anime, show, or game you love and log them here.
+      </p>
 
-    <p class="intro">Post an anime, show, or game you love and log them here.</p>
+      <section class="review-layout">
+        <!-- Review Form: Posting will be added after it is covered in class -->
+        <form class="panel review-form">
+          <h2>Post a Favorite</h2>
+          <label for="review-name">Your name</label>
+          <input
+            id="review-name"
+            maxlength="30"
+            placeholder="Name or nickname"
+            required
+          />
+          <label for="review-type">Type</label>
+          <select id="review-type">
+            <option>Anime</option>
+            <option>Show</option>
+            <option>Game</option>
+          </select>
+          <label for="review-title">Title</label>
+          <input
+            id="review-title"
+            maxlength="60"
+            placeholder="What is your favorite?"
+            required
+          />
+          <label for="review-text">Why do you like it?</label>
+          <textarea
+            id="review-text"
+            maxlength="240"
+            rows="5"
+            placeholder="Write a short, spoiler-free review..."
+            required
+          ></textarea>
+          <p class="character-count">0/240</p>
+          <button class="button" type="button">Post Review</button>
+          <p class="form-note">Review posting will be added later.</p>
+        </form>
 
-    <section class="review-layout">
-      <form class="panel review-form" id="review-form">
-        <h2>Post a Favorite</h2>
-        <label for="review-name">Your name</label>
-        <input id="review-name" maxlength="30" placeholder="Name or nickname" required>
-        <label for="review-type">Type</label>
-        <select id="review-type">
-          <option>Anime</option>
-          <option>Show</option>
-          <option>Game</option>
-        </select>
-        <label for="review-title">Title</label>
-        <input id="review-title" maxlength="60" placeholder="What is your favorite?" required>
-        <label for="review-text">Why do you like it?</label>
-        <textarea id="review-text" maxlength="240" rows="5" placeholder="Write a short, spoiler-free review..."
-          required></textarea>
-        <p class="character-count"><span id="review-count">0</span>/240</p>
-        <button class="button" type="submit">Post Review</button>
-        <p class="form-note">Reviews are saved on this device.</p>
-      </form>
+        <!-- Example Favorites -->
+        <div>
+          <h2>Favorites</h2>
+          <div class="review-list">
+            <article class="panel review-item">
+              <p class="eyebrow">Anime</p>
+              <h3>Violet Evergarden</h3>
+              <p>
+                Beautiful, patient, and deeply human. Its quietest moments carry
+                the most weight.
+              </p>
+              <p class="review-meta">Posted by Cozy Corner</p>
+            </article>
+            <article class="panel review-item">
+              <p class="eyebrow">Game</p>
+              <h3>Stardew Valley</h3>
+              <p>
+                A relaxing game about building a farm, meeting a community, and
+                enjoying life at your own pace.
+              </p>
+              <p class="review-meta">Posted by Cozy Corner</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
 
-      <div>
-        <h2>Favorites</h2>
-        <p id="review-status" class="api-status" aria-live="polite"></p>
-        <div class="review-list" id="review-list"></div>
+    <footer>
+      <a class="logo" href="index.html">☁️ Cozy Corner</a>
+
+      <p>Your cozy space for anime, reviews, and everyday favorites.</p>
+
+      <div class="socials">
+        <a
+          href="https://www.instagram.com/zrunit"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+        <a
+          href="https://www.linkedin.com/in/zakibushiri/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+        <a
+          href="https://discord.gg/fgdWXJXKu5"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Discord
+        </a>
       </div>
-    </section>
-  </main>
 
-  <footer>
-    <a class="logo" href="index.html">☁️ Cozy Corner</a>
-
-    <p>Your cozy space for anime, reviews, and everyday favorites.</p>
-
-    <div class="socials">
-      <a href="https://www.instagram.com/zrunit" target="_blank" rel="noopener noreferrer">Instagram</a><a
-        href="https://www.linkedin.com/in/zakibushiri/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a
-        href="https://discord.gg/fgdWXJXKu5" target="_blank" rel="noopener noreferrer">Discord</a>
-    </div>
-
-    <p class="copyright">© 2026 Cozy Corner</p>
-  </footer>
-  <script src="reviews.js"></script>
-</body>
-
+      <p class="copyright">© 2026 Cozy Corner</p>
+    </footer>
+  </body>
 </html>
