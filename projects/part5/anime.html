@@ -7,6 +7,7 @@
 
     <title>Cozy Corner | Anime Shelf</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="script.js" defer></script>
   </head>
 
   <body>
@@ -22,10 +23,16 @@
         <a href="faq.html">FAQ</a>
       </nav>
 
-      <details class="small-nav">
-        <summary aria-label="Open menu">☰</summary>
+      <div class="small-nav">
+        <button id="toggle-nav" aria-label="Open menu" aria-expanded="false">
+          ☰
+        </button>
 
-        <nav class="menu-links" aria-label="Mobile navigation">
+        <nav
+          id="menu-links"
+          class="menu-links hide-small"
+          aria-label="Mobile navigation"
+        >
           <a href="index.html">Home</a>
           <a class="active" href="anime.html">Anime Shelf</a>
           <a href="upcoming.html">Upcoming Releases</a>
@@ -33,7 +40,7 @@
           <a href="about.html">About Me</a>
           <a href="faq.html">FAQ</a>
         </nav>
-      </details>
+      </div>
     </header>
 
     <main>

@@ -7,6 +7,7 @@
 
     <title>Cozy Corner | Home</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="script.js" defer></script>
   </head>
 
   <body>
@@ -25,10 +26,16 @@
       </nav>
 
       <!-- Small Screen Navigation -->
-      <details class="small-nav">
-        <summary aria-label="Open menu">☰</summary>
+      <div class="small-nav">
+        <button id="toggle-nav" aria-label="Open menu" aria-expanded="false">
+          ☰
+        </button>
 
-        <nav class="menu-links" aria-label="Mobile navigation">
+        <nav
+          id="menu-links"
+          class="menu-links hide-small"
+          aria-label="Mobile navigation"
+        >
           <a class="active" href="index.html">Home</a>
           <a href="anime.html">Anime Shelf</a>
           <a href="upcoming.html">Upcoming Releases</a>
@@ -36,7 +43,7 @@
           <a href="about.html">About Me</a>
           <a href="faq.html">FAQ</a>
         </nav>
-      </details>
+      </div>
     </header>
 
     <main>
@@ -53,52 +60,36 @@
         </div>
       </section>
 
-      <!-- Explore Section -->
+      <!-- Explore Cozy Corner Slideshow -->
       <section>
         <h2>Explore Cozy Corner</h2>
 
-        <div class="cards home-cards">
-          <a class="card" href="anime.html">
+        <div class="slideshow">
+          <button
+            id="previous-slide"
+            class="slide-button"
+            aria-label="Previous slide"
+          >
+            ‹
+          </button>
+
+          <a id="slide-link" class="slide" href="anime.html">
             <img
+              id="slide-image"
               src="images/bookshelf.avif"
               alt="Bookshelf filled with books"
             />
-            <div class="card-copy">
-              <strong>🎬 Anime Shelf</strong>
-              <span>Find anime based on genres you enjoy.</span>
+
+            <div class="slide-copy">
+              <p class="eyebrow">Explore</p>
+              <h3 id="slide-title">Anime Shelf</h3>
+              <p id="slide-text">Find anime based on genres you enjoy.</p>
             </div>
           </a>
-          <a class="card" href="upcoming.html">
-            <img src="images/soon.jpg" alt="Upcoming anime release" />
-            <div class="card-copy">
-              <strong>📅 Upcoming Releases</strong>
-              <span>See what is coming next and when it arrives.</span>
-            </div>
-          </a>
-          <a class="card" href="reviews.html">
-            <img src="images/writing.avif" alt="Person writing a review" />
-            <div class="card-copy">
-              <strong>⭐ Review Room</strong>
-              <span>Share favorite anime, shows, and games.</span>
-            </div>
-          </a>
-          <a class="card" href="about.html">
-            <img src="images/me.jpg" alt="Portrait for the About Me page" />
-            <div class="card-copy">
-              <strong>👋 About Me</strong>
-              <span>Meet the person behind Cozy Corner.</span>
-            </div>
-          </a>
-          <a class="card" href="faq.html">
-            <img
-              src="images/what.jpg"
-              alt="Question marks representing frequently asked questions"
-            />
-            <div class="card-copy">
-              <strong>❓ FAQ</strong>
-              <span>Answers to common questions about Cozy Corner.</span>
-            </div>
-          </a>
+
+          <button id="next-slide" class="slide-button" aria-label="Next slide">
+            ›
+          </button>
         </div>
       </section>
 
