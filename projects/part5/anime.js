@@ -1,3 +1,4 @@
+/* Used AI to impliment infinite anime sections */
 /**
  * Anime Shelf
  * Gets anime recommendations from the AniList GraphQL API.
