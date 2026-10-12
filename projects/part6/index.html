@@ -1,0 +1,168 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cozy Corner | Home</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <a class="logo" href="index.html">☁️ Cozy Corner</a>
+
+      <!-- Large Screen Navigation -->
+      <nav class="big-nav" aria-label="Main navigation">
+        <a class="active" href="index.html">Home</a>
+        <a href="anime.html">Anime Shelf</a>
+        <a href="upcoming.html">Upcoming Releases</a>
+        <a href="trailers.html">Trailer Room</a>
+        <a href="about.html">About Me</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+
+      <!-- Small Screen Navigation -->
+      <div class="small-nav">
+        <button id="toggle-nav" aria-label="Open menu" aria-expanded="false">
+          ☰
+        </button>
+
+        <nav
+          id="menu-links"
+          class="menu-links hide-small"
+          aria-label="Mobile navigation"
+        >
+          <a class="active" href="index.html">Home</a>
+          <a href="anime.html">Anime Shelf</a>
+          <a href="upcoming.html">Upcoming Releases</a>
+          <a href="trailers.html">Trailer Room</a>
+          <a href="about.html">About Me</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Welcome Section -->
+      <section class="home-hero">
+        <div>
+          <h1>Welcome to Cozy Corner</h1>
+
+          <p>
+            A cozy place for anime recommendations, fresh trailers,
+            community favorites, and stories worth sharing.
+          </p>
+          <a class="button" href="anime.html">Browse the Shelf</a>
+        </div>
+      </section>
+
+      <!-- Main Pages -->
+      <section class="home-pages">
+        <h2>Explore Cozy Corner</h2>
+
+        <div class="home-links">
+          <a class="home-link" href="anime.html">
+            <img src="images/bookshelf.avif" alt="Bookshelf filled with books" />
+            <div>
+              <h3>Anime Shelf</h3>
+              <p>Find anime based on genres you enjoy.</p>
+            </div>
+          </a>
+
+          <a class="home-link" href="upcoming.html">
+            <img src="images/soon.jpg" alt="Upcoming anime release" />
+            <div>
+              <h3>Upcoming Releases</h3>
+              <p>See new anime releases and when they are coming out.</p>
+            </div>
+          </a>
+
+          <a class="home-link" href="trailers.html">
+            <img
+              class="crunchyroll-icon"
+              src="images/crunchyroll.svg"
+              alt="Crunchyroll icon"
+            />
+            <div>
+              <h3>Trailer Room</h3>
+              <p>Watch fresh anime trailers from Crunchyroll.</p>
+            </div>
+          </a>
+
+          <a class="home-link" href="about.html">
+            <img class="contain" src="images/me.jpg" alt="Portrait for the About Me page" />
+            <div>
+              <h3>About Me</h3>
+              <p>Meet the person behind Cozy Corner.</p>
+            </div>
+          </a>
+
+          <a class="home-link" href="faq.html">
+            <img class="contain" src="images/what.jpg" alt="Question marks" />
+            <div>
+              <h3>FAQ</h3>
+              <p>Find answers to common questions about the website.</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Slideshow -->
+      <section>
+        <h2>More From Cozy Corner</h2>
+
+        <div class="slideshow">
+          <button id="previous-slide" class="slide-button" aria-label="Previous slide">‹</button>
+
+          <a id="slide-link" class="slide" href="anime.html">
+            <img id="slide-image" src="images/bookshelf.avif" alt="Bookshelf filled with books" />
+            <div class="slide-copy">
+              <p class="eyebrow">Explore</p>
+              <h3 id="slide-title">Anime Shelf</h3>
+              <p id="slide-text">Find anime based on genres you enjoy.</p>
+            </div>
+          </a>
+
+          <button id="next-slide" class="slide-button" aria-label="Next slide">›</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <a class="logo" href="index.html">Cozy Corner</a>
+
+      <p>Your cozy space for anime, trailers, and everyday favorites.</p>
+
+      <div class="socials">
+        <a
+          href="https://www.instagram.com/zrunit"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+        <a
+          href="https://www.linkedin.com/in/zakibushiri/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+        <a
+          href="https://discord.gg/fgdWXJXKu5"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Discord
+        </a>
+      </div>
+
+      <p class="copyright">© 2026 Cozy Corner</p>
+    </footer>
+  </body>
+</html>

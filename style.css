@@ -46,6 +46,17 @@ a {
     text-decoration: none;
 }
 
+.repo-link {
+    text-align: center;
+}
+
+.repo-link a {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #78c0e0;
+    text-decoration: underline;
+}
+
 
 /* ASSIGNMENTS */
 

@@ -1,0 +1,710 @@
+/* Colors */
+
+:root {
+  --page: #eaf2f8;
+  --paper: #fff;
+  --text: #213b59;
+  --blue: #4c759b;
+  --orange: #f47521;
+  --line: #b9ccdd;
+  --soft: #dce8f2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Main Page */
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(#bed1e5, #7899be);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  line-height: 1.55;
+}
+
+header,
+main {
+  width: min(92%, 1180px);
+  margin: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+.logo {
+  font-family: Georgia, serif;
+}
+
+/* Header and Navigation */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 90px;
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  font-size: 29px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.big-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.big-nav a,
+.menu-links a {
+  padding: 10px 13px;
+  border-radius: 24px;
+}
+
+.active,
+.big-nav a:hover,
+.button {
+  background: var(--blue);
+  color: white;
+}
+
+.small-nav {
+  display: none;
+}
+
+.hide-small {
+  display: none;
+}
+
+/* Page Sections */
+section {
+  margin: 54px 0;
+}
+
+.home-hero {
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  padding: 5%;
+  border-radius: 20px;
+  background: var(--soft);
+}
+
+.home-hero div {
+  max-width: 620px;
+}
+
+.home-hero h1 {
+  font-size: clamp(42px, 5vw, 62px);
+}
+
+.home-hero p {
+  font-size: 18px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(45px, 6vw, 76px);
+  line-height: 1.05;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 13px 24px;
+  border-radius: 28px;
+}
+
+.eyebrow {
+  margin-bottom: 4px;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.page-title {
+  margin: 50px 0 4px;
+}
+
+.inner-title {
+  font-size: clamp(42px, 6vw, 66px);
+}
+
+.intro {
+  max-width: 720px;
+  font-size: 18px;
+}
+
+/* Slideshow */
+.slideshow {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  align-items: center;
+}
+
+.slide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--paper);
+}
+
+.slide img {
+  width: 100%;
+  height: 340px;
+  background: var(--soft);
+  object-fit: cover;
+  object-position: center;
+}
+
+.slide-copy {
+  align-self: center;
+  padding: 35px;
+}
+
+.slide-copy h3 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.slide-button {
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--blue);
+  color: white;
+  cursor: pointer;
+  font-size: 32px;
+}
+
+.slide-button:hover {
+  background: var(--text);
+}
+
+/* Home Page Links */
+.home-links {
+  display: grid;
+  gap: 28px;
+}
+
+.home-link {
+  display: grid;
+  grid-template-columns: 42% 1fr;
+  min-height: 280px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--paper);
+}
+
+.home-link:nth-child(even) {
+  grid-template-columns: 1fr 42%;
+}
+
+.home-link:nth-child(even) img {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.home-link img {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+}
+
+.home-link img.contain {
+  background: var(--soft);
+  object-fit: contain;
+}
+
+.home-link img.crunchyroll-icon {
+  padding: 70px;
+  background: var(--orange);
+  object-fit: contain;
+}
+
+.home-link div {
+  align-self: center;
+  padding: 45px;
+}
+
+.home-link h3 {
+  margin: 0;
+  font-size: 34px;
+}
+
+.home-link p {
+  font-size: 18px;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card,
+.panel,
+details.faq {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--paper);
+}
+
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  height: 190px;
+  display: block;
+  object-fit: cover;
+}
+
+.card div,
+.panel {
+  padding: 22px;
+}
+
+.card p {
+  margin-top: 10px;
+  color: #5c7086;
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+/* About Section */
+.about-strip {
+  padding: 50px 9%;
+  border-radius: 24px;
+  background: var(--soft);
+  text-align: center;
+}
+
+.about-strip p {
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Anime Shelf */
+.shelf {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+/* Forms */
+.finder {
+  display: grid;
+  grid-template-columns: auto minmax(180px, 280px) auto;
+  gap: 14px;
+  align-items: center;
+  margin: 35px 0 24px;
+}
+
+.finder label {
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: white;
+  color: var(--text);
+  font: inherit;
+}
+
+.finder select {
+  max-width: 260px;
+}
+
+.finder .button,
+.contact-form .button {
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.finder .button {
+  min-width: 150px;
+  justify-self: start;
+}
+
+.anime-card img {
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-position: top;
+}
+
+.anime-card div {
+  padding: 16px;
+}
+
+.anime-card h2 {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.25;
+}
+
+.tags span {
+  display: inline-block;
+  margin: 4px 4px 0 0;
+  padding: 6px 12px;
+  border: 1px solid #6f8eac;
+  border-radius: 18px;
+  background: rgb(255 255 255 / 75%);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Upcoming Releases */
+.release-card h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.release-card img {
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-position: top;
+}
+
+.release-card .date {
+  margin: 7px 0;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+.release-card .summary {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.api-status {
+  min-height: 24px;
+  color: #5c7086;
+}
+
+.load-more {
+  margin: -25px 0 55px;
+  text-align: center;
+}
+
+.load-more .button {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.shelf-more {
+  margin: 25px 0 55px;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 16px;
+  border-radius: 22px;
+  background: var(--blue);
+  color: white;
+  font-weight: bold;
+}
+
+.text-link:hover,
+.text-link:focus {
+  background: var(--text);
+}
+
+/* Trailer Room */
+.trailer-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.trailer-list {
+  display: grid;
+  gap: 12px;
+}
+
+.trailer-card {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 14px;
+  align-items: center;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--paper);
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.trailer-card img {
+  width: 120px;
+  height: 68px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.trailer-card span {
+  display: grid;
+  gap: 3px;
+}
+
+.trailer-card small {
+  color: #5c7086;
+}
+
+.video-panel h2 {
+  margin-top: 0;
+}
+
+.video-panel iframe {
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  aspect-ratio: 16 / 9;
+}
+
+/* About Page */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.about-grid img {
+  width: 100%;
+  border-radius: 24px;
+}
+
+/* Contact Form */
+.contact-form {
+  display: grid;
+  gap: 8px;
+  max-width: 700px;
+}
+
+.contact-form label {
+  margin-top: 6px;
+  font-weight: bold;
+}
+
+.form-result {
+  min-height: 24px;
+  margin: 0;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* FAQ Page */
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+details.faq {
+  margin: 0;
+  padding: 20px 24px;
+}
+
+details.faq summary {
+  cursor: pointer;
+  font-family: Georgia, serif;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  margin-top: 80px;
+  padding: 45px 4%;
+  background: var(--text);
+  color: white;
+  text-align: center;
+}
+
+footer .socials {
+  justify-content: center;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 18px 0;
+}
+
+.copyright {
+  color: #6d7e90;
+  font-size: 14px;
+}
+
+/* Tablet Size */
+@media (max-width: 980px) {
+  header {
+    position: relative;
+  }
+
+  .big-nav {
+    display: none;
+  }
+
+  .small-nav {
+    display: block;
+  }
+
+  .small-nav button {
+    padding: 5px;
+    border: 0;
+    background: none;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 30px;
+    text-align: right;
+  }
+
+  .menu-links {
+    position: absolute;
+    z-index: 2;
+    top: 75px;
+    right: 0;
+    width: min(300px, 100%);
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--paper);
+  }
+
+  .menu-links a {
+    display: block;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .shelf {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Phone Size */
+@media (max-width: 650px) {
+  .logo {
+    font-size: 23px;
+  }
+
+  .cards,
+  .about-grid,
+  .trailer-layout,
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shelf {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .slideshow {
+    grid-template-columns: 38px 1fr 38px;
+    gap: 8px;
+  }
+
+  .slide {
+    grid-template-columns: 1fr;
+  }
+
+  .slide img {
+    height: 220px;
+  }
+
+  .slide-copy {
+    padding: 22px;
+  }
+
+  .slide-button {
+    width: 38px;
+    height: 38px;
+  }
+
+  .finder {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .finder select {
+    max-width: none;
+  }
+
+  .finder .button {
+    width: 100%;
+  }
+
+  .wide {
+    grid-column: auto;
+  }
+
+  .home-link,
+  .home-link:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .home-link:nth-child(even) img {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .home-link div {
+    padding: 28px;
+  }
+
+  .trailer-card {
+    grid-template-columns: 100px 1fr;
+  }
+
+  .trailer-card img {
+    width: 100px;
+    height: 56px;
+  }
+}
