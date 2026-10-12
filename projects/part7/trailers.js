@@ -1,5 +1,5 @@
 // * Gets the JSON file.
-const jsonUrl = "https://zbushiri.github.io/projects/part6/json/trailers.json";
+const jsonUrl = "https://zbushiri.github.io/projects/part7/json/trailers.json";
 
 const getTrailers = async () => {
   const response = await fetch(jsonUrl);
