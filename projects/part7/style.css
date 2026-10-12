@@ -1,11 +1,9 @@
 /* Colors */
 
 :root {
-  --page: #eaf2f8;
   --paper: #fff;
   --text: #213b59;
   --blue: #4c759b;
-  --orange: #f47521;
   --line: #b9ccdd;
   --soft: #dce8f2;
 }
@@ -231,12 +229,6 @@ h1 {
   object-fit: contain;
 }
 
-.home-link img.crunchyroll-icon {
-  padding: 70px;
-  background: var(--orange);
-  object-fit: contain;
-}
-
 .home-link div {
   align-self: center;
   padding: 45px;
@@ -446,58 +438,34 @@ textarea {
 }
 
 /* Trailer Room */
-.trailer-layout {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 28px;
-  align-items: start;
-}
-
 .trailer-list {
   display: grid;
-  gap: 12px;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
 }
 
 .trailer-card {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 14px;
-  align-items: center;
-  width: 100%;
-  padding: 12px;
+  overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: 20px;
   background: var(--paper);
-  color: var(--text);
-  cursor: pointer;
-  font: inherit;
-  text-align: left;
 }
 
 .trailer-card img {
-  width: 120px;
-  height: 68px;
-  border-radius: 10px;
+  width: 100%;
+  height: 220px;
   object-fit: cover;
 }
 
-.trailer-card span {
-  display: grid;
-  gap: 3px;
+.trailer-card h2,
+.trailer-card p {
+  margin: 18px 20px;
 }
 
-.trailer-card small {
-  color: #5c7086;
-}
-
-.video-panel h2 {
-  margin-top: 0;
-}
-
-.video-panel iframe {
+.trailer-card iframe {
+  display: block;
   width: 100%;
   border: 0;
-  border-radius: 12px;
   aspect-ratio: 16 / 9;
 }
 
@@ -636,7 +604,7 @@ footer .socials {
 
   .cards,
   .about-grid,
-  .trailer-layout,
+  .trailer-list,
   .faq-grid {
     grid-template-columns: 1fr;
   }
@@ -699,12 +667,4 @@ footer .socials {
     padding: 28px;
   }
 
-  .trailer-card {
-    grid-template-columns: 100px 1fr;
-  }
-
-  .trailer-card img {
-    width: 100px;
-    height: 56px;
-  }
 }

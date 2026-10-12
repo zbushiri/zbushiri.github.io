@@ -5,11 +5,8 @@ document.getElementById("contact-form").onsubmit = async (event) => {
   const form = event.target;
   const formData = new FormData(form);
   const result = document.getElementById("contact-result");
-  const submitButton = form.querySelector('button[type="submit"]');
 
   formData.append("access_key", "34f630b6-fbd1-4cb3-8d8b-631d61c7f8f6");
-  submitButton.disabled = true;
-  submitButton.innerHTML = "Sending...";
   result.innerHTML = "Your message is getting ready for takeoff...";
 
   try {
@@ -29,9 +26,6 @@ document.getElementById("contact-form").onsubmit = async (event) => {
   } catch (error) {
     result.innerHTML = "The message got lost in the clouds. Please try again.";
   }
-
-  submitButton.disabled = false;
-  submitButton.innerHTML = "Send Message";
 
   setTimeout(() => {
     result.innerHTML = "";

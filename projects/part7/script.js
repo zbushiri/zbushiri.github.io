@@ -18,7 +18,6 @@ const slides = [
     image: "images/bookshelf.avif",
     alt: "Bookshelf filled with books",
     fit: "cover",
-    position: "center",
     link: "anime.html",
   },
   {
@@ -27,16 +26,14 @@ const slides = [
     image: "images/soon.jpg",
     alt: "Upcoming anime release",
     fit: "cover",
-    position: "center",
     link: "upcoming.html",
   },
   {
     title: "Trailer Room",
     text: "Watch fresh anime trailers from Crunchyroll.",
-    image: "images/trailers/fall-2026.jpg",
+    image: "images/crunchyroll.png",
     alt: "Crunchyroll anime trailers",
     fit: "cover",
-    position: "center",
     link: "trailers.html",
   },
   {
@@ -45,7 +42,6 @@ const slides = [
     image: "images/me.jpg",
     alt: "Portrait for the About Me page",
     fit: "contain",
-    position: "center",
     link: "about.html",
   },
   {
@@ -54,7 +50,6 @@ const slides = [
     image: "images/what.jpg",
     alt: "Question marks representing frequently asked questions",
     fit: "contain",
-    position: "center",
     link: "faq.html",
   },
 ];
@@ -74,7 +69,6 @@ const showSlide = () => {
   slideImage.src = slide.image;
   slideImage.alt = slide.alt;
   slideImage.style.objectFit = slide.fit;
-  slideImage.style.objectPosition = slide.position;
   slideTitle.textContent = slide.title;
   slideText.textContent = slide.text;
   slideLink.href = slide.link;

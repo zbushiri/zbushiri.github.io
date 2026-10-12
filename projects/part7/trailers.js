@@ -7,36 +7,35 @@ const getTrailers = async () => {
 };
 
 const showTrailers = async () => {
-  const trailerList = document.getElementById("trailer-list");
-
-  try {
-    const trailers = await getTrailers();
-    trailers.forEach((trailer) => {
-      trailerList.append(makeTrailer(trailer));
-    });
-  } catch (error) {
-    trailerList.innerHTML = "<p>Trailers could not load. Please try again later.</p>";
-  }
+  const trailers = await getTrailers();
+  trailers.forEach((trailer) => {
+    document.getElementById("trailer-list").append(makeTrailer(trailer));
+  });
 };
 
 // * Makes one trailer card.
 const makeTrailer = (trailer) => {
-  const card = document.createElement("button");
+  const card = document.createElement("article");
   card.classList.add("trailer-card");
+
+  const title = document.createElement("h2");
+  title.innerHTML = trailer.title;
+  card.append(title);
 
   const image = document.createElement("img");
   image.src = trailer.img_name;
   image.alt = `${trailer.title} trailer`;
   card.append(image);
 
-  const text = document.createElement("span");
-  text.innerHTML = `<strong>${trailer.title}</strong><small>${trailer.type} | ${trailer.release}</small><small>${trailer.description}</small>`;
-  card.append(text);
+  const info = document.createElement("p");
+  info.innerHTML = `${trailer.type} | ${trailer.release}<br>${trailer.description}`;
+  card.append(info);
 
-  card.onclick = () => {
-    document.getElementById("trailer-video").src = trailer.video_url;
-    document.getElementById("trailer-title").innerHTML = trailer.title;
-  };
+  const video = document.createElement("iframe");
+  video.src = trailer.video_url;
+  video.title = `${trailer.title} trailer`;
+  video.allowFullscreen = true;
+  card.append(video);
 
   return card;
 };
