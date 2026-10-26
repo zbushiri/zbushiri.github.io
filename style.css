@@ -76,6 +76,7 @@ a {
 #projects {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
     gap: 20px;
